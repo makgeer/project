@@ -12,7 +12,7 @@ def temper(type_temp: int, temp: float) -> float:
     """
     if type_temp == 1:
         return temp * 1.8 + 32
-    elif type_temp == 2:
+    if type_temp == 2:
         return temp + 273.15
     return -1.0
 
@@ -27,17 +27,17 @@ def massa(type_mass: int, mass: float) -> float:
     """
     if type_mass == 1:
         return mass * 0.035273998
-    elif type_mass == 2:
+    if type_mass == 2:
         return mass * 2.2046
-    elif type_mass == 3:
+    if type_mass == 3:
         return mass * 0.157473
-    elif type_mass == 4:
+    if type_mass == 4:
         return mass / 50.6
-    elif type_mass == 5:
+    if type_mass == 5:
         return mass / 45.3
-    elif type_mass == 6:
+    if type_mass == 6:
         return mass / 907.18
-    elif type_mass == 7:
+    if type_mass == 7:
         return mass / 1016
     return -1.0
 
@@ -61,13 +61,14 @@ def precoint():
         type_temp = int(input("Введите тип температуры:\n 1.Forengate\n 2.Kelvin\n:"))
         temp = float(input('Введите значение температуы:\n'))
         return ("Получаем: %.3f" % temper(type_temp, temp))
-    elif convert == 2:
+    if convert == 2:
         type_mass = int(input("Введите тип массы:  1. Килограммы -> фунты\n 2. Граммы -> унции \n "))
         mass = float(input("Введите значение массы: "))
         return ("Получаем: %.3f" % massa(type_mass, mass))
-    elif convert == 3:
+    if convert == 3:
         type_length = int(input(
-            "Введите тип длинны: ' 1. Километры -> мили\n 2. Метры -> Ярды\n 3. Метры -> футы\n 4. Сантиметры -> дюймы\n 5. Миллиметры -> дюймы \n' "))
+            "Введите тип длинны: ' 1. Километры -> мили\n 2. Метры -> Ярды\n 3. Метры -> футы\n 4. Сантиметры ->"
+            " дюймы\n 5. Миллиметры -> дюймы \n' "))
         length = float(input("Введите значение длинны: "))
         return ("Получаем: %.3f" % lengths(type_length, length))
 
