@@ -83,7 +83,7 @@ def speed_con(type_speed: int, speed: float) -> float:
 	if type_speed == 1:
 		return speed / 1.60934  # километры в мили
 	if type_speed == 2:
-		return speed * 185.2  # километры в кабельтов
+		return speed * 5.399  # километры в кабельтов
 	if type_speed == 3:
 		return speed / 0.30481  # метры в узлы
 	if type_speed == 4:
