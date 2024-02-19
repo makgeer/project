@@ -1,9 +1,6 @@
 from ru_converter import *
 from en_converter import *
 
-
-	'''# общий модуль логики'''
-
 def precoint(var = 1):
 	
 		if convert == 1:

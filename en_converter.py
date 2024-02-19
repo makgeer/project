@@ -71,7 +71,7 @@ def lengths_1(type_length: int, length: float) -> float:
 """
 
 def speed_con_1(type_speed: int, speed: float) -> float:
-	if type_speed == 1:
+if type_speed == 1:
 		return speed * 1.60934  # километры в мили
 	if type_speed == 2:
 		return speed / 5.399  # кмлометры в кабельтов
