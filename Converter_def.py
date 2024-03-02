@@ -4,7 +4,7 @@ from en_converter import *
 
 def precount():
     if convert == 1:
-        type_temp = int(input("Введите тип температуры:\n 1.Forengate\n 2.Kelvin\n:"))
+        type_temp = int(input("Введите тип температуры:\n 1.Foreshorten\n 2.Kelvin\n:"))
         temp = float(input("Введите значение температуы:\n"))
         return "Получаем: %.2f" % (temper(type_temp, temp))
     elif convert == 2:
@@ -39,14 +39,14 @@ def precount():
 
 def precount_1():
     if convert == 1:
-        type_temp = int(input("Введите тип температуры:\n 1.Forengate\n 2.Kelvin\n:"))
+        type_temp = int(input("Введите тип температуры:\n 1.Foreshorten\n 2.Kelvin\n:"))
         temp = float(input("Введите значение температуы:\n"))
         return "Получаем: %.2f" % (temper_1(type_temp, temp))
     elif convert == 2:
         type_mass = int(input("Введите тип массы:\n1. Граммы <- унции\n2. Килограммы <- фунты\n"
                               "3. Килограммы <- стоун\n4. Килограмм <- квинтал\n"
                               "5. Килограмм <- центал\n6. Килограмм "
-                              "<- короткая тонна'us'\n"
+                              "<- короткая тонна 'us'\n"
                               "7. Килограмм <- длинная тонна 'br'\n"))
         mass = float(input("Введите значение массы: "))
         return "Получаем: %.2f" % massa_1(type_mass, mass)
@@ -63,7 +63,8 @@ def precount_1():
         return
     elif convert == 5:
         type_speed = int(input(
-            "Ввыберите единицы конвертации:\n1. Колометры в час <- Мили в час\n2. Километры в час <- Кабельтов в час\n"
+            "Ввыберите единицы конвертации:\n1. Колометры в час <- Мили в час\n"
+            "2. Километры в час <- Кабельтов в час\n"
             "3. Метр в секунду <- Узел в секунду\n4. Махи в час <- Километры в час\n"))
         speed = float(input("Введите значение:\n"))
         return "Получаем: %.2f" % speed_con_1(type_speed, speed)
@@ -74,10 +75,12 @@ def precount_1():
 choose = 0
 
 while True:
-    choose = input("1: Ru - Eng\n2: Eng - Ru\n Для завершения программы - наберите exit или нажмите клавишу 'q'\n")
+    choose = input("1: Ru - Eng\n2: Eng - Ru\n Для завершения программы - "
+                   "наберите exit или нажмите клавишу 'q'\n")
 
     if choose == 'q' or choose == 'Q' or choose == 'exit' or choose == 'Exit':
-        print('Программа завершена, спасибо за использование.\nThe program is complete, thanks for using it.')
+        print('Программа завершена, спасибо за использование.\n'
+              'The program is complete, thanks for using it.')
         break
     choose = int(choose)
     if choose == 1:
@@ -87,6 +90,7 @@ while True:
         print(precount())
     elif choose == 2:
         print("Converter 0.2")
-        convert = int(input("What would you like to convertation:\n1. Temperature\n2. Weight\n3. Length\n4."
+        convert = int(input("What would you like to convertation:\n1. Temperature\n"
+                            "2. Weight\n3. Length\n4."
                             " Volume\n5. Speed\n"))
         print(precount_1())
