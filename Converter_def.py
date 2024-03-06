@@ -23,12 +23,13 @@ def precount():
         length = float(input("Введите значение длинны: "))
         return "Получаем: %.2f" % (lengths(type_length, length))
     elif convert == 4:
-        type_volume = float(input(
+        type_volume = int(input(
             "Введите тип объема:\n1. Миллилитр -> американская жидкая унция\n"
             "2. Миллилитр -> американская житкая чашка\n3. Миллилитр -> американская житкая пинта\n"
             "4. Литр -> американская житкая кварта\n5. Литр -> американский житкий галлон"
         ))
-        return
+        volume_con = float(input("Введите значение объема:\n"))
+        return "Получаем: %.2f" % volume(type_volume, volume_con)
     elif convert == 5:
         type_speed = int(input(
             "Выберите единицы конвертации:\n1. Колометры в час -> Мили в час\n2. Километры в час -> Кабельтов в час\n"
@@ -59,8 +60,13 @@ def precount_1():
         length = float(input("Введите значение длинны: "))
         return "Получаем: %.2f" % lengths_1(type_length, length)
     elif convert == 4:
-        pass
-        return
+        type_volume = int(input(
+            "Введите тип объема:\n1. Миллилитр -> американская жидкая унция\n"
+            "2. Миллилитр -> американская житкая чашка\n3. Миллилитр -> американская житкая пинта\n"
+            "4. Литр -> американская житкая кварта\n5. Литр -> американский житкий галлон"
+            ))
+        volume_con = float(input("Введите значение объема:\n"))
+        return "Получаем: %.2f" % volume_1(type_volume, volume_con)
     elif convert == 5:
         type_speed = int(input(
             "Ввыберите единицы конвертации:\n1. Колометры в час <- Мили в час\n"
@@ -76,7 +82,7 @@ choose = 0
 
 while True:
     choose = input("1: Ru - Eng\n2: Eng - Ru\n Для завершения программы - "
-                   "наберите exit или нажмите клавишу 'q'\n")
+                   "наберите exit или 'q'\n")
 
     if choose == 'q' or choose == 'Q' or choose == 'exit' or choose == 'Exit':
         print('Программа завершена, спасибо за использование.\n'

@@ -88,3 +88,15 @@ def speed_con(type_speed: int, speed: float) -> float:
     if type_speed == 4:
         return speed * 900  # махи в километры
     return -1.0
+def volume(type_volume: int, volume_con: float) -> float:
+    if type_volume == 1:
+        return volume_con * 1
+    if type_volume == 2:
+        return volume_con * 2
+    if type_volume == 3:
+        return volume_con * 3
+    if type_volume == 4:
+        return volume_con * 4
+    if type_volume == 5:
+        return volume_con *5
+    return -1.0
